@@ -1,9 +1,18 @@
-@model PostViewModel
+﻿@model aspnet_blog_application.ViewModels.PostListViewModel
 
-<div class="text-center">
-    <h1 class="display-4">My Latest Post</h1>
-</div>
+@{
+    ViewData["Title"] = "Browse Reports";
+}
 
-<div class="text-right">
-    <a asp-controller="Posts"asp-action="NewPost">New Post</a>
+<div class="row">
+    @foreach (var report in Model.Reports)
+    {
+        <div class="card" style="width: 18rem;padding:20px; margin:20px;">
+            <div class="card-body">
+                <h3 class="card-title">@report.Title</h3>
+                <p class="small">Date: @report.CreatedAt</p>
+                <a asp-controller="Posts" asp-action="Details" asp-route-id="@report.Id" class="btn btn-primary">Details</a>
+            </div>
+        </div>
+    }
 </div>

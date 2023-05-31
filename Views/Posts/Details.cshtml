@@ -1,0 +1,17 @@
+﻿@model aspnet_blog_application.ViewModels.DetailsViewModel
+
+@{
+    ViewData["Title"] = "Report Details";
+}
+
+<div class="row">
+@Model.Report.Title<br>
+Date: @Model.Report.CreatedAt<br>
+Last Updated: @Model.Report.UpdatedAt<br>
+<br>
+Description:<br>
+@Model.Report.Body <br>
+</div>
+<br>
+<a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Return</a>
+<a asp-controller="Posts" asp-action="Delete" asp-route-id="@Model.Report.Id" class="btn btn-primary">Delete</a>
