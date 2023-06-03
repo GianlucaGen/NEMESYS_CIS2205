@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yjInBlRVJhjZEnU8z+I80kY7oNRKdH/COABhaSHBLkl7j9ZVexERV3MYhwpRNb01ERW1wkrG7gKVyU8EVxdX7w==",
+  "dgSpecHash": "KIcHlsFF1TYliRppEArokcqNvhJe0BR+LnyKG3R/lBYvg6PUFWMbymzQTkB0Y6rew7sQCh6hBqVWy8iBQcizDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gianl\\Desktop\\aspnet-blog-application\\aspnet-blog-application.csproj",
+  "projectFilePath": "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gianl\\.nuget\\packages\\microsoft.data.sqlite\\7.0.3\\microsoft.data.sqlite.7.0.3.nupkg.sha512",
     "C:\\Users\\gianl\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.3\\microsoft.data.sqlite.core.7.0.3.nupkg.sha512",

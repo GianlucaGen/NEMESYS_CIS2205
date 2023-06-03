@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gianl\\Desktop\\aspnet-blog-application\\aspnet-blog-application.csproj": {}
+    "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gianl\\Desktop\\aspnet-blog-application\\aspnet-blog-application.csproj": {
+    "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gianl\\Desktop\\aspnet-blog-application\\aspnet-blog-application.csproj",
+        "projectUniqueName": "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj",
         "projectName": "aspnet-blog-application",
-        "projectPath": "C:\\Users\\gianl\\Desktop\\aspnet-blog-application\\aspnet-blog-application.csproj",
+        "projectPath": "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj",
         "packagesPath": "C:\\Users\\gianl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gianl\\Desktop\\aspnet-blog-application\\obj\\",
+        "outputPath": "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
