@@ -1,0 +1,45 @@
+@model InvestigationViewModel
+
+@{
+    ViewData["Title"] = "Edit Investigation";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+@if( @Model.Invest.UserID == @Model.UserID || (@Model.Invest.UserID == "-1" && @Model.UserType == "1")){
+<form asp-action="EditInvestigation" id="form-action" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+            <label asp-for="Invest.Description" class="form-label"></label>
+            <textarea asp-for="Invest.Description" class="form-control" rows="5" cols="40" required value=@Model.Invest.Description></textarea>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+            <label asp-for="Invest.DateOfAction" class="form-label"></label>
+            <input asp-for="Invest.DateOfAction" class="form-control" required value=@Model.Invest.DateOfAction/>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+            <label for="Invest.Status" class="form-label"></label>
+		<select asp-for="Invest.Status" class="form-control" required>
+  		<option value="Closed">Closed</option>
+  		<option value="Being Investigated">Being Investigated</option>
+  		<option value="No Action Required">No Action Required</option>
+		</select>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
+            <input type="Submit" id="form-button" class="btn btn-primary" value="Submit" />
+            <a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Cancel</a>
+        </div>
+    </div>
+    <input type="hidden" asp-for="Invest.Id" class="form-control" required value=@Model.Invest.Id/>
+    <input type="hidden" asp-for="Invest.UserID" class="form-control" required value=@Model.UserID/>
+</form>
+}else{
+    <div>You do not have permission to edit this investigation.</div>
+}

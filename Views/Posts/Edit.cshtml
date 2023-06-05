@@ -1,61 +1,58 @@
 @model PostViewModel
 
 @{
-    ViewData["Title"] = "Create Report";
+    ViewData["Title"] = "Edit Report";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-@if(@Model.UserID == ""){
-
-<div>You must be logged in to create a report.</div>
-
-}else{
-
-<form asp-action="Insert" id="form-action" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+@if( @Model.Post.UserID == @Model.UserID ){
+<form asp-action="EditSubmit" id="form-action" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
 
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
             <label asp-for="Post.Title" class="form-label"></label>
-            <input asp-for="Post.Title" class="form-control" required />
+            <input asp-for="Post.Title" class="form-control" required value=@Model.Post.Title/>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
             <label asp-for="Post.Location" class="form-label"></label>
-            <input asp-for="Post.Location" class="form-control" required />
+            <input asp-for="Post.Location" class="form-control" required value=@Model.Post.Location/>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
             <label asp-for="Post.SpotTime" class="form-label">Time Spotted</label>
-            <input asp-for="Post.SpotTime" class="form-control" required />
+            <input asp-for="Post.SpotTime" class="form-control" required value=@Model.Post.SpotTime/>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
             <label asp-for="Post.HazardType" class="form-label">Hazard Type</label>
-            <input asp-for="Post.HazardType" class="form-control" required />
+            <input asp-for="Post.HazardType" class="form-control" required value=@Model.Post.HazardType/>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
             <label asp-for="Post.Description" class="form-label"></label>
-            <textarea asp-for="Post.Description" class="form-control" rows="5" cols="40" required ></textarea>
+            <textarea asp-for="Post.Description" class="form-control" rows="5" cols="40" required value=@Model.Post.Description></textarea>
         </div>
     </div>
-    <input type="hidden" asp-for="Post.UserID" class="form-control" required value=@Model.UserID/>
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
-	    <label asp-for="PhotoImage" class="col-md-2">Photo (Optional)</label>
-            <input type="file" asp-for="PhotoImage" class="form-control" />
+	    <label asp-for="PhotoImage" class="col-md-2">Replacement Photo (Optional)</label>
+            <input type="file" asp-for="PhotoImage" class="form-control"/>
         </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
-            <input type="Submit" id="form-button" class="btn btn-primary" value="Add Report" />
+            <input type="Submit" id="form-button" class="btn btn-primary" value="Submit Changes" />
+            <a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Cancel</a>
         </div>
     </div>
+    <input type="hidden" asp-for="Post.Id" class="form-control" required value=@Model.Post.Id/>
 </form>
-
+}else{
+    <div>You do not have permission to edit this report.</div>
 }

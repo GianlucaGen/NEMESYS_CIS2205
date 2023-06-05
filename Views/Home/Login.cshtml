@@ -1,0 +1,43 @@
+﻿@model aspnet_blog_application.ViewModels.LogInViewModel
+
+@if(@Model.myUsername==null){
+    ViewData["Title"] = "Log In";
+    <h1>@ViewData["Title"]</h1>
+
+    @if(@Model.helpMessage!=null){
+        <div style="color:red;">@Model.helpMessage</div>
+    }
+
+    <form asp-action="TryLogin" id="account" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Username" class="form-label"></label>
+                <input asp-for="Username" class="form-control" required />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Password" class="form-label"></label>
+                <input type="password" asp-for="Password" class="form-control" required />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
+                <input type="Submit" id="form-button" class="btn btn-primary" value="Log In" />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
+		<label class="form-label">Don't have an account?</label><br>
+            	<a asp-controller="Home" asp-action="Register" class="btn btn-primary">Go To Registration</a>
+            </div>
+        </div>
+    </form>
+}else{
+    ViewData["Title"] = ("Welcome, " + @Model.myUsername +"!");
+    <h1>@ViewData["Title"]</h1>
+    <form asp-action="Logout" id="form-action" method="post" class="form-horizontal" role="form">
+	<a asp-controller="Home" asp-action="UserEdit" class="btn btn-primary">Update Info</a>
+	<input type="Submit" id="form-button" class="btn btn-primary" value="Log Out" />
+    </form>
+}

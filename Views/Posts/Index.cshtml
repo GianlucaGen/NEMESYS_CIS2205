@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Browse Reports";
 }
+<h1>@ViewData["Title"]</h1>
 
 <div class="row">
     @foreach (var report in Model.Reports)
@@ -10,7 +11,10 @@
         <div class="card" style="width: 18rem;padding:20px; margin:20px;">
             <div class="card-body">
                 <h3 class="card-title">@report.Title</h3>
-                <p class="small">Date: @report.CreatedAt</p>
+                <p class="small">Reported At: @report.CreatedAt</p>
+                <p class="small">At @report.Location during @report.SpotTime</p>
+		<p class="small">Upvotes: @report.Upvotes</p>
+		<p class="small">Status: @report.Status</p>
                 <a asp-controller="Posts" asp-action="Details" asp-route-id="@report.Id" class="btn btn-primary">Details</a>
             </div>
         </div>

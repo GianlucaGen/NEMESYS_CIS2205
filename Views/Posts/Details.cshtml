@@ -4,14 +4,89 @@
     ViewData["Title"] = "Report Details";
 }
 
-<div class="row">
-@Model.Report.Title<br>
-Date: @Model.Report.CreatedAt<br>
-Last Updated: @Model.Report.UpdatedAt<br>
+@if(@Model.Report.UserID == "-1"){
+    <h1>Report Not Found</h1>
+}else{
+<div>
+<h1>@Model.Report.Title</h1>
+Location Spotted: @Model.Report.Location<br>
+Time Spotted: @Model.Report.SpotTime<br>
+Type of Hazard: @Model.Report.HazardType<br>
 <br>
 Description:<br>
-@Model.Report.Body <br>
-</div>
+<div style="width:500px; display:inline-block;">@Model.Report.Description</div> <br>
 <br>
-<a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Return</a>
-<a asp-controller="Posts" asp-action="Delete" asp-route-id="@Model.Report.Id" class="btn btn-primary">Delete</a>
+<img src="@Model.Report.Photo"/> <br>
+<br>
+Date Created: @Model.Report.CreatedAt<br>
+Last Updated: @Model.Report.UpdatedAt<br>
+Upvotes: @Model.Report.Upvotes<br>
+<br>
+Posted By: @Model.Poster.Username<br>
+Email: @Model.Poster.Email<br>
+@if(@Model.Poster.PhoneNum!=null && @Model.Poster.PhoneNum!=""){
+    <div>Phone Number: @Model.Poster.PhoneNum</div>
+}
+<br>
+</div>
+@if( @Model.Poster.Id == @Model.CurrentUser.Id ){
+
+<form asp-action="Delete" asp-route-id="@Model.Report.Id" id="form-action" method="post" class="form-horizontal" role="form">
+    <a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Return</a>
+    <a asp-controller="Posts" asp-action="Edit" asp-route-id="@Model.Report.Id" class="btn btn-primary">Edit</a>
+    <input type="Submit" id="form-button" class="btn btn-primary" value="Delete" />
+</form>
+
+}else if(@Model.CurrentUser.UserType==1){
+
+<form asp-action="Delete" asp-route-id="@Model.Report.Id" id="form-action" method="post" class="form-horizontal" role="form">
+    <a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Return</a>
+    <input type="Submit" id="form-button" class="btn btn-primary" value="Delete" />
+</form>
+
+}else if(@Model.CurrentUser.UserType==0 && @Model.CanUpvote==1){
+
+<form asp-action="Upvote" asp-route-id="@Model.Report.Id" asp-route-userid="@Model.CurrentUser.Id" id="form-action" method="post" class="form-horizontal" role="form">
+    <a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Return</a>
+    <input type="Submit" id="form-button" class="btn btn-primary" value="Upvote" />
+</form>
+
+}else if(@Model.CurrentUser.UserType==0 && @Model.CanUpvote==0){
+
+<form asp-action="RemoveUpvote" asp-route-id="@Model.Report.Id" asp-route-userid="@Model.CurrentUser.Id" id="form-action" method="post" class="form-horizontal" role="form">
+    <a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Return</a>
+    <input type="Submit" id="form-button" class="btn btn-primary" value="Remove Upvote" />
+</form>
+
+}else{
+
+<form asp-action="Delete" asp-route-id="@Model.Report.Id" id="form-action" method="post" class="form-horizontal" role="form">
+    <a asp-controller="Posts" asp-action="Index" class="btn btn-primary">Return</a>
+</form>
+
+}
+
+<br><div>- - - Investigation Details - - -</div>
+
+<div>Status: @Model.Investigation.Status</div><br>
+@if(@Model.Investigation.UserID!="-1"){
+	<div>Date of Action: @Model.Investigation.DateOfAction</div>
+	<div>Description:</div>
+	<div style="width:500px; display:inline-block;">@Model.Investigation.Description</div> <br>
+	<br>
+	<div>Investigator: @Model.Investigator.Username</div>
+	<div>Email: @Model.Investigator.Email</div>
+	@if(@Model.Investigator.PhoneNum!=null && @Model.Investigator.PhoneNum!=""){
+	    <div>Phone Number: @Model.Investigator.PhoneNum</div>
+	}
+	<br>
+}
+if(@Model.CurrentUser.UserType==1){
+    if(@Model.Investigation.Status=="Open"){
+        <a asp-controller="Posts" asp-action="ChangeInvestigation" asp-route-id="@Model.Investigation.Id" class="btn btn-primary">Start Investigation</a>
+    }else if(@Model.Investigator.Id.ToString() == @Model.Investigation.UserID){
+        <a asp-controller="Posts" asp-action="ChangeInvestigation" asp-route-id="@Model.Investigation.Id" class="btn btn-primary">Update Investigation</a>
+    }
+}
+
+}

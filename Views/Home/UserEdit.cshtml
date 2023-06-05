@@ -1,0 +1,38 @@
+﻿@model aspnet_blog_application.ViewModels.UserEditViewModel
+
+@if(@Model.ThisUser.Id!=-1){
+    ViewData["Title"] = "Update Info";
+    <h1>@ViewData["Title"]</h1>
+
+    <form asp-action="UpdateInfo" id="account" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Update.Id" class="form-control" required value=@Model.ThisUser.Id/>
+        <input type="hidden" asp-for="Update.Username" class="form-control" required value=@Model.ThisUser.Username/>
+        <input type="hidden" asp-for="Update.UserType" class="form-control" required value=@Model.ThisUser.UserType/>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Update.Password" class="form-label"></label>
+                <input asp-for="Update.Password" class="form-control" required value=@Model.ThisUser.Password/>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Update.Email" class="form-label"></label>
+                <input asp-for="Update.Email" class="form-control" required value=@Model.ThisUser.Email/>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Update.PhoneNum" class="form-label">Phone Number (Optional)</label>
+                <input asp-for="Update.PhoneNum" class="form-control" value=@Model.ThisUser.PhoneNum/>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
+                <input type="Submit" id="form-button" class="btn btn-primary" value="Save" />
+    		<a asp-controller="Home" asp-action="Login" class="btn btn-primary">Cancel</a>
+            </div>
+        </div>
+    </form>
+}else{
+    <div>Must be logged in to update account details.</div>
+}

@@ -1,0 +1,40 @@
+﻿@model aspnet_blog_application.ViewModels.UserEditViewModel
+@{
+    ViewData["Title"] = "Register Account";
+}
+    <h1>@ViewData["Title"]</h1>
+
+    <form asp-action="RegisterAccount" id="account" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+        <input type="hidden" asp-for="Update.Id" class="form-control" required value=-2/>
+        <input type="hidden" asp-for="Update.UserType" class="form-control" required value=0/>
+	<div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Update.Username" class="form-label"></label>
+                <input asp-for="Update.Username" class="form-control" required/>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Update.Password" class="form-label"></label>
+                <input asp-for="Update.Password" class="form-control" required/>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Update.Email" class="form-label"></label>
+                <input asp-for="Update.Email" class="form-control" required />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10">
+                <label asp-for="Update.PhoneNum" class="form-label">Phone Number (Optional)</label>
+                <input asp-for="Update.PhoneNum" class="form-control" />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-xl-6 col-lg-8 col-md-8 col-sm-10 mt-3 mb-5">
+                <input type="Submit" id="form-button" class="btn btn-primary" value="Register" />
+    		<a asp-controller="Home" asp-action="Login" class="btn btn-primary">Cancel</a>
+            </div>
+        </div>
+    </form>
