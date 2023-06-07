@@ -1,25 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonpo\\NEMESYS\\aspnet-blog-application.csproj": {}
+    "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonpo\\NEMESYS\\aspnet-blog-application.csproj": {
+    "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonpo\\NEMESYS\\aspnet-blog-application.csproj",
+        "projectUniqueName": "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj",
         "projectName": "aspnet-blog-application",
-        "projectPath": "C:\\Users\\jonpo\\NEMESYS\\aspnet-blog-application.csproj",
-        "packagesPath": "C:\\Users\\jonpo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonpo\\NEMESYS\\obj\\",
+        "projectPath": "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\aspnet-blog-application.csproj",
+        "packagesPath": "C:\\Users\\gianl\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gianl\\Documents\\Projects\\CIS2205Assignment\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\jonpo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\gianl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -82,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -9,69 +9,81 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = aspnet_blog_application
 build_property.RootNamespace = aspnet_blog_application
-build_property.ProjectDir = C:\Users\jonpo\NEMESYS\
+build_property.ProjectDir = C:\Users\gianl\Documents\Projects\CIS2205Assignment\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\jonpo\NEMESYS
+build_property.MSBuildProjectDirectory = C:\Users\gianl\Documents\Projects\CIS2205Assignment
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/jonpo/NEMESYS/Views/Home/Index.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Home/Hall.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIYWxsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Home/Login.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Home/Register.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Home/UserEdit.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Home/UserEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Posts/ChangeInvestigation.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Posts/ChangeInvestigation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcQ2hhbmdlSW52ZXN0aWdhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Posts/Details.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Posts/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Posts/Edit.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Posts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Posts/Hall.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Posts/Hall.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcSGFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Posts/Index.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Posts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Posts/_InsertForm.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Posts/NewPost.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcTmV3UG9zdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Posts/_InsertForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcX0luc2VydEZvcm0uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Shared/Error.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/_ViewImports.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/_ViewStart.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/jonpo/NEMESYS/Views/Shared/_Layout.cshtml]
+[C:/Users/gianl/Documents/Projects/CIS2205Assignment/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2vj78t2qta
